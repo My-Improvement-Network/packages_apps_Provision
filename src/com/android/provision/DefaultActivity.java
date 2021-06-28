@@ -17,6 +17,8 @@
 package com.android.provision;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
