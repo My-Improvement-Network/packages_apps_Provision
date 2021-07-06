@@ -38,6 +38,8 @@ public class DefaultActivity extends Activity {
         Settings.Secure.putInt(getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 1);
 	 //enable unknown sources by default
 	Settings.Secure.putInt(getContentResolver(), Settings.Secure.INSTALL_NON_MARKET_APPS, 1); 
+		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://support.rita.systems"));
+		startActivity(browserIntent);
         // remove this activity from the package manager.
         PackageManager pm = getPackageManager();
         ComponentName name = new ComponentName(this, DefaultActivity.class);
